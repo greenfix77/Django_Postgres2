@@ -25,11 +25,11 @@ SECRET_KEY = 'django-insecure-zv&hy2^_^ir6*be28+k60+0dkb(&x=5*op)db4w^5hwf62*s=x
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 CSRF_TRUSTED_ORIGINS = [
-    'https://post.rooobah.ir',
-    'http://post.rooobah.ir', # اگر از http هم استفاده می‌کنید
+    'https://shop.rooobah.ir',
+    'http://shop.rooobah.ir', # اگر از http هم استفاده می‌کنید
     
 ]
-ALLOWED_HOSTS = ["post.rooobah.ir", "localhost", "127.0.0.1"]
+ALLOWED_HOSTS = ["shop.rooobah.ir", "localhost", "127.0.0.1"]
 
 
 # Application definition
