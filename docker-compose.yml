@@ -1,0 +1,20 @@
+services:
+  web:
+    build: . 
+    command: python /code/manage.py runserver 0.0.0.0:8000
+    volumes:
+      - .:/code
+    ports: 
+      - 8000:8000
+    depends_on:
+      - db # اطمینان از راه‌اندازی دیتابیس قبل از وب
+
+  db:
+    image: my-registry/postgres:17
+    environment:
+      # توجه: مقادیر زیر را حتماً با رمز عبورهای قوی و اختصاصی جایگزین کنید!
+      #- POSTGRES_USER=myuser
+      #- POSTGRES_PASSWORD=mypassword_strong
+      #- POSTGRES_DB=mydatabase
+      - POSTGRES_HOST_AUTH_METHOD=trust 
+    
